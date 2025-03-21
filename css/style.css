@@ -1,0 +1,693 @@
+/* 字體 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+
+body {
+    background-image: url(../images/bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+/* 置頂鍵和錨點沒滾動的關係設的 */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* 浮動主選單_監聽(.active配合JS) */
+.menu_pc a.active {
+    color: #151515
+}
+
+
+
+/* PC導覽列 */
+.menu_pc {
+    position: fixed;
+    top: 80px;
+    right: 0px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #0000003a;
+    backdrop-filter: blur(4px);
+    padding: 16px 20px;
+    border-radius: 12px 0px 0px 12px;
+
+
+
+}
+
+
+
+
+
+.menu_pc li a {
+    font-family: 'Noto Sans TC';
+    font-weight: 400;
+    margin: auto;
+    text-align: center;
+    padding: 12px 2px;
+    margin-bottom: 2px;
+    display: block;
+    white-space: nowrap;
+
+
+}
+
+.menu_pc li a:hover {
+    color: #151515
+}
+
+.menu_pc ul {
+    padding-right: 4%;
+    list-style: none;
+}
+
+.menu_pc ul a {
+    text-decoration: none;
+    color: #ffffff;
+    border-bottom: 0.25px solid #ffffff;
+}
+
+.menu_pc .top a {
+    border-bottom: 0px;
+    font-size: 26px;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+
+/* 浮動主選單_手機 */
+.menu_MB {
+    display: none;
+    width: 100%;
+    margin: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    z-index: 2;
+    position: fixed;
+    bottom: 0px;
+}
+
+
+
+.menu_MB ul {
+    display: flex;
+}
+
+
+.menu_MB ul li a {
+    display: inline-block;
+    width: 90px;
+    margin: 0px 1px;
+    padding: 16px 0px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #0000003a;
+    backdrop-filter: blur(4px);
+}
+
+
+
+
+
+
+
+.menu_MB ul li a:hover {
+    color: #151515
+}
+
+
+
+
+
+
+
+
+
+/* KV */
+.kv .mb {
+    display: none;
+}
+
+.kv {
+    position: relative;
+}
+
+.kv .bg {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.kv .pc .logo {
+    width: 18%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.kv .kv_pc {
+    width: 28%;
+    position: absolute;
+    top: 20%;
+    left: 18%;
+}
+
+
+.kv .pc .kvlight {
+    width: 28%;
+    position: absolute;
+    top: 20%;
+    left: 18%;
+    background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+    -webkit-filter: brightness(1.5);
+    -webkit-mask-size: 300% 200%;
+    -webkit-mask-image: -webkit-linear-gradient(-45deg,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 1) 60%,
+            rgba(255, 255, 255, 0) 60%);
+    -webkit-transition: -webkit-mask-position;
+    -webkit-animation-timing-function: linear;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-filter: brightness(1.5);
+    -moz-mask-size: 300% 200%;
+    -moz-mask-image: -webkit-linear-gradient(-45deg,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 1) 60%,
+            rgba(255, 255, 255, 0) 60%);
+    -moz-transition: -webkit-mask-position;
+    -moz-animation-timing-function: linear;
+    -moz-transform: translate3d(0, 0, 0);
+    -o-filter: brightness(1.5);
+    -o-mask-size: 300% 200%;
+    -o-mask-image: -webkit-linear-gradient(-45deg,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 1) 60%,
+            rgba(255, 255, 255, 0) 60%);
+    -o-transition: -webkit-mask-position;
+    -o-animation-timing-function: linear;
+    -o-transform: translate3d(0, 0, 0);
+    filter: brightness(1.5);
+    mask-size: 300% 200%;
+    mask-image: -webkit-linear-gradient(-45deg,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 1) 60%,
+            rgba(255, 255, 255, 0) 60%);
+    transition: -webkit-mask-position;
+    animation-timing-function: linear;
+    transform: translate3d(0, 0, 0);
+    transition-duration: 2s;
+    animation: light 2s ease-out infinite;
+}
+
+@keyframes light {
+    from {
+        -webkit-mask-position: 150% 0px;
+        -moz-mask-position: 150% 0px;
+        -o-mask-position: 150% 0px;
+        mask-position: 150% 0px;
+    }
+
+    to {
+        -webkit-mask-position: 0% 0px;
+        -moz-mask-position: 0% 0px;
+        -o-mask-position: 0% 0px;
+        mask-position: 0% 0px;
+    }
+}
+
+
+/* 折價券 */
+.ticket {
+    text-align: center;
+    margin-top: 4%;
+}
+
+.ticket img {
+    max-width: 800px;
+    width: 100%;
+}
+
+
+
+
+/* 美麗激推 */
+.title {
+    max-width: 1100px;
+    width: 100%;
+    margin: 1% auto 0%;
+
+}
+
+.title_mb {
+    display: none;
+}
+
+
+
+
+
+.swiper_box {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1% auto 4%;
+
+}
+
+.swiper {
+    max-width: 1060px;
+    width: 100%;
+    height: 100%;
+    padding: 0px 12px !important;
+
+}
+
+.swiper_box .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    background-color: #ffffff64;
+    border: 6px solid #ffffff;
+}
+
+.swiper_box .swiper-slide a {
+    text-decoration: none;
+}
+
+.swiper_box .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper_box .swiper-slide h2 {
+    font-size: 14px;
+    color: #4D4D4D;
+    font-family: 'Noto Sans TC';
+    font-weight: 600;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 38px;
+    margin: 8px 0px;
+    line-height: 18px;
+    transition: 0.3s;
+}
+
+.swiper_box .swiper-slide:hover h2 {
+    color: #5F7830;
+}
+
+
+
+.swiper_box .swiper-slide .money {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.swiper_box .swiper-slide h4 {
+    font-size: 14px;
+    text-decoration: line-through;
+    font-family: 'Roboto';
+    color: #999999;
+
+}
+
+.swiper_box .swiper-slide span {
+    font-size: 16px;
+}
+
+.swiper_box .swiper-slide h3 {
+    font-size: 24px;
+    font-family: 'Roboto';
+    color: #E2545F;
+    font-weight: 600;
+}
+
+
+
+
+.myprev,
+.mynext {
+    background-color: #ffffff6f;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #ffffff;
+}
+
+
+
+
+
+
+
+
+/* 大勢新星 */
+.box {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+
+.box img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+.box .list {
+    background-image: url(../images/title_middle.png);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 0px 6%;
+
+}
+
+.box .list .card {
+    padding: 12px;
+    background-color: #ffffff64;
+    border: 6px solid #ffffff;
+    transition: 0.8s;
+}
+
+.box .list .card:hover h2 {
+    color: #5F7830;
+}
+
+.box .list .card:hover {
+    transform: translateY(-10px);
+}
+
+.box .list .card a {
+    text-decoration: none;
+}
+
+.box .list .card h2 {
+    font-size: 14px;
+    color: #4D4D4D;
+    font-family: 'Noto Sans TC';
+    font-weight: 600;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 38px;
+    margin: 8px 0px;
+    line-height: 18px;
+    transition: 0.3s;
+}
+
+.box .list .card .money {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.box .list .card .price {
+    font-size: 14px;
+    text-decoration: line-through;
+    font-family: 'Roboto';
+    color: #999999;
+
+}
+
+.box .list .card span {
+    font-size: 16px;
+}
+
+.box .list .card .sale {
+    font-size: 24px;
+    font-family: 'Roboto';
+    color: #E2545F;
+    font-weight: 600;
+}
+
+
+
+
+
+/* 美力大牌 */
+.brand {
+    max-width: 1100px;
+    width: 100%;
+    margin: 2% auto 4%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 10px;
+}
+
+.brand img {
+    width: 100%;
+}
+
+
+
+
+/* 更多商品 */
+.other {
+    max-width: 1100px;
+    width: 100%;
+    margin: 2% auto 4%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+}
+
+.other li img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+
+
+
+.other li img:hover {
+    transform: translateY(-10px);
+}
+
+
+/* footer */
+
+footer {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto 4%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+footer p {
+    font-size: 11px;
+    font-family: 'Noto Sans TC';
+    color: #4D4D4D;
+    line-height: 15px;
+
+}
+
+
+@media screen and (max-width:1200px) {
+
+    .myprev,
+    .mynext {
+        display: none;
+
+    }
+
+}
+
+
+@media screen and (max-width:768px) {
+
+    /* swiper */
+    .title_pc {
+        display: none;
+    }
+
+    .title .title_mb {
+        padding: 0px 10px;
+    }
+
+    .title_mb {
+        display: block;
+        box-sizing: border-box;
+    }
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+@media screen and (max-width:576px) {
+
+    /* 浮動主選單_手機 */
+    .menu_pc {
+        display: none;
+    }
+
+    .menu_MB {
+        display: block;
+    }
+
+    /* KV */
+    .kv .pc {
+        display: none;
+    }
+
+    .kv .mb {
+        display: block;
+    }
+
+
+    .kv .mb .logo {
+        width: 40%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+
+    .kv .kv_mb {
+        width: 48%;
+        position: absolute;
+        top: 10%;
+        right: 4%;
+    }
+
+
+
+    .kv .mb .kvlight {
+        width: 48%;
+        position: absolute;
+        top: 10%;
+        right: 4%;
+        background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);
+        overflow: hidden;
+        z-index: 1;
+        pointer-events: none;
+        -webkit-filter: brightness(1.5);
+        -webkit-mask-size: 300% 200%;
+        -webkit-mask-image: -webkit-linear-gradient(-45deg,
+                rgba(255, 255, 255, 0) 40%,
+                rgba(255, 255, 255, 1) 60%,
+                rgba(255, 255, 255, 0) 60%);
+        -webkit-transition: -webkit-mask-position;
+        -webkit-animation-timing-function: linear;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-filter: brightness(1.5);
+        -moz-mask-size: 300% 200%;
+        -moz-mask-image: -webkit-linear-gradient(-45deg,
+                rgba(255, 255, 255, 0) 40%,
+                rgba(255, 255, 255, 1) 60%,
+                rgba(255, 255, 255, 0) 60%);
+        -moz-transition: -webkit-mask-position;
+        -moz-animation-timing-function: linear;
+        -moz-transform: translate3d(0, 0, 0);
+        -o-filter: brightness(1.5);
+        -o-mask-size: 300% 200%;
+        -o-mask-image: -webkit-linear-gradient(-45deg,
+                rgba(255, 255, 255, 0) 40%,
+                rgba(255, 255, 255, 1) 60%,
+                rgba(255, 255, 255, 0) 60%);
+        -o-transition: -webkit-mask-position;
+        -o-animation-timing-function: linear;
+        -o-transform: translate3d(0, 0, 0);
+        filter: brightness(1.5);
+        mask-size: 300% 200%;
+        mask-image: -webkit-linear-gradient(-45deg,
+                rgba(255, 255, 255, 0) 40%,
+                rgba(255, 255, 255, 1) 60%,
+                rgba(255, 255, 255, 0) 60%);
+        transition: -webkit-mask-position;
+        animation-timing-function: linear;
+        transform: translate3d(0, 0, 0);
+        transition-duration: 2s;
+        animation: light 2s ease-out infinite;
+    }
+
+    @keyframes light {
+        from {
+            -webkit-mask-position: 150% 0px;
+            -moz-mask-position: 150% 0px;
+            -o-mask-position: 150% 0px;
+            mask-position: 150% 0px;
+        }
+
+        to {
+            -webkit-mask-position: 0% 0px;
+            -moz-mask-position: 0% 0px;
+            -o-mask-position: 0% 0px;
+            mask-position: 0% 0px;
+        }
+    }
+
+
+
+
+
+    /* 大勢新星 */
+    .box .list {
+        grid-template-columns: repeat(2, 1fr);
+
+
+
+    }
+
+
+    /* 美力大牌 */
+    .brand {
+        grid-template-columns: repeat(3, 1fr);
+
+
+    }
+
+    /* 更多商品 */
+    .other {
+        max-width: 1100px;
+        width: 100%;
+        margin: 2% auto 4%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+
+    }
+
+}
