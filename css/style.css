@@ -19,7 +19,7 @@ html {
 
 /* 浮動主選單_監聽(.active配合JS) */
 .menu_pc a.active {
-    color: #151515
+    color: #3f3f3f;
 }
 
 
@@ -33,7 +33,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #0000003a;
+    background-color: #00000022;
     backdrop-filter: blur(4px);
     padding: 16px 20px;
     border-radius: 12px 0px 0px 12px;
@@ -60,7 +60,7 @@ html {
 }
 
 .menu_pc li a:hover {
-    color: #151515
+    color: #3f3f3f;
 }
 
 .menu_pc ul {
@@ -111,7 +111,7 @@ html {
     text-align: center;
     text-decoration: none;
     color: #ffffff;
-    background-color: #0000003a;
+    background-color: #00000034;
     backdrop-filter: blur(4px);
 }
 
@@ -122,7 +122,7 @@ html {
 
 
 .menu_MB ul li a:hover {
-    color: #151515
+    color: #3f3f3f;
 }
 
 
@@ -464,6 +464,11 @@ html {
 
 .brand img {
     width: 100%;
+    transition: 0.8s;
+}
+
+.brand img:hover {
+    transform: scale(1.1);
 }
 
 
