@@ -239,6 +239,25 @@ html {
     width: 100%;
 }
 
+/* 排行榜 */
+.rankings {
+    max-width: 1100px;
+    margin: 6% auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 0px 16px;
+}
+
+
+.rankings img {
+    width: 100%;
+    transition: 0.8s;
+}
+
+.rankings img:hover {
+    transform: scale(1.06);
+}
 
 
 
@@ -663,6 +682,14 @@ footer p {
         }
     }
 
+
+
+    /* 排行榜 */
+    .rankings {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+
+    }
 
 
 
